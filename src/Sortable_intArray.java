@@ -1,13 +1,19 @@
 class Sortable_intArray{
+	
+	public Sortable_intArray(int n){
+		this.a=new int[n];
+		this.fill_random();
+	}
 	public Sortable_intArray(){
 		this.a=new int[20];
 		this.fill_random();
 	}
+	
 	public Sortable_intArray(int []ext){
 		this.a=new int[ext.length];
-		for (int i=0;i<a.length;i++) a[i]=ext[i];
-		
+		for (int i=0;i<a.length;i++) a[i]=ext[i];	
 	}
+	
 	private int[] a;
     private void fill_random() {
         for (int i=0;i<a.length-1;i++)
