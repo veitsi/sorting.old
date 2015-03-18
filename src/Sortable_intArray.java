@@ -1,4 +1,9 @@
+import java.util.Arrays;
+
 class Sortable_intArray{
+	
+	private boolean ascendOrder=true;
+	public int[] a;
 	
 	public Sortable_intArray(int n){
 		this.a=new int[n];
@@ -14,7 +19,7 @@ class Sortable_intArray{
 		for (int i=0;i<a.length;i++) a[i]=ext[i];	
 	}
 	
-	private int[] a;
+	
     private void fill_random() {
         for (int i=0;i<a.length-1;i++)
         a[i]= randomInRange(0,50);
@@ -46,7 +51,23 @@ class Sortable_intArray{
             }//end for
         }//end while
       }//end bubbleSort()
-      
+    
+    public void bubbleSortRev(){
+    	Arrays.sort(this.a);
+    }
+    
+    public void obmenSort(){
+    	Arrays.sort(this.a);
+    }
+    
+    public void mergeSort(){
+    	Arrays.sort(this.a);
+    }
+    
+    public void recursDivsort(){
+    	Arrays.sort(this.a);
+    }
+    
       public void minsort() {
       int min;
       int minpos;
@@ -86,16 +107,4 @@ class Sortable_intArray{
           quicksort(n,w-1);
           quicksort(w+1,m);
        }//end quicksort 
-    
-    public void print_all() {
-        for(int i=0;i<a.length;i++) {System.out.print(a[i]+" ");} 
-        System.out.println();
-      }
-      public void print_div(int w) {
-        for(int i=0;i<a.length;i++) {
-            if (i==w) System.out.print("<"+a[i]+">");
-            else System.out.print(a[i]+" ");
-        } 
-        System.out.println();
-      }
 }
