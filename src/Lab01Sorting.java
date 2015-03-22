@@ -8,12 +8,14 @@ public class Lab01Sorting {
 	private static long sortDuration;
 
 	public static void main(String[] args) {
-		 
-		 Sortable_intArray lab01=new Sortable_intArray();
+		Sortable_intArray[] tracks={new BubbleRev(), new Quick(), new Merge()};
+		
+		//ArrayView.print_all(new ArrayFiller().fill(20));
+		 Sortable_intArray lab01=new BubbleRev(new ArrayFiller());
 	     System.out.println("before sorting");
 	     ArrayView.print_all(lab01.a);
 		 startTime = System.nanoTime();
-		 lab01.bubbleSort();
+		 lab01.sort();
 		 sortDuration=System.nanoTime()-startTime;
 		 System.out.println("sortDuration "+sortDuration);
 		 
