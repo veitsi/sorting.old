@@ -3,7 +3,7 @@ import java.util.Arrays;
 class Sortable_intArray{
 	
 	protected boolean ascendOrder=true;
-	public int[] a;
+	public int[] a=null;
 	
 	//constructors
 	public Sortable_intArray(int []ext){
@@ -27,8 +27,10 @@ class Sortable_intArray{
 	}
 	//end of constructors
 	
-	public void sort(){
+	public int[] getSorted(int []a){
+		this.a=a;
 		Arrays.sort(this.a);
+		return this.a;
 	}
 	
     private double average() {
@@ -85,8 +87,10 @@ class Min extends Sortable_intArray{
 }//end Min
 
 class Quick extends Sortable_intArray{
-	public void sort(){
+	public int[] getSorted(int[] a){
+		this.a=a;
 		quicksort(0,this.a.length-1);
+		return this.a;
 	}
 	private void quicksort(int n,int m) {
         if ((m-n)<1) return;
@@ -114,11 +118,10 @@ class Quick extends Sortable_intArray{
 }
 
 class Obmen extends Sortable_intArray{
-	public Obmen(int n, ArrayFiller af){
-		super(n,af);
-	}
-	public void sort(){
+	public int[] getSorted(int[] a){
+		this.a=a;
 		System.out.println("In obmen");
+		return a;
 	}
 }
 

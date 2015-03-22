@@ -7,7 +7,7 @@ public class Sortable_intArrayTest {
 	@Test
 	public void normalArray() {
 		Sortable_intArray lab01 = new Sortable_intArray(new int[]{1,7,3,1,0});
-		lab01.sort();
+		lab01.a=lab01.getSorted(lab01.a);
         ArrayView.print_all(lab01.a);
         assertTrue("Arrays are not equal", java.util.Arrays.equals(lab01.a, new int[]{0,1,1,3,7}));
         

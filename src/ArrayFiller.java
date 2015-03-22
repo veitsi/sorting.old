@@ -18,13 +18,22 @@ class ArrayFiller {
 
 }
 
+
+
 class SortedSeq extends ArrayFiller{
 	public int[] getArray(int n){
 		a=super.getArray(n);
 		Arrays.sort(a);
 		return a;
 	}
+}
 
+class SortedWithLast extends ArrayFiller{
+	
+}
+
+class CounterSorted extends ArrayFiller{
+	
 }
 
 class Random extends ArrayFiller{
